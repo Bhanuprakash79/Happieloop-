@@ -1,0 +1,35 @@
+ def count_words(text):
+    # Split the text into words using whitespace as the delimiter
+    words = text.split()
+    return len(words)
+
+def main():
+    print("Word Count Program")
+    user_input = input("Enter the text: ")
+    word_count = count_words(user_input)
+    print(f"Number of words in the text: {word_count}")
+
+if _name_ == "_main_":
+    main()
+[14:46, 10/29/2023] Sasuke Uchiha: def calculate_factorial(n):
+    if n < 0:
+        return "Factorial is not defined for negative numbers."
+    elif n == 0 or n == 1:
+        return 1
+    else:
+        factorial = 1
+        for i in range(2, n + 1):
+            factorial *= i
+        return factorial
+
+def main():
+    print("Factorial Calculator")
+    try:
+        num = int(input("Enter a number to calculate its factorial: "))
+        result = calculate_factorial(num)
+        print(f"The factorial of {num} is {result}")
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+
+if _name_ == "_main_":
+    main()

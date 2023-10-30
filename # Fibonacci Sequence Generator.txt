@@ -1,0 +1,28 @@
+# Fibonacci Sequence Generator
+
+def generate_fibonacci_sequence(n):
+    # Initialize the first two Fibonacci numbers
+    fib_sequence = [0, 1]
+
+    # Generate the Fibonacci sequence up to the 'n' terms
+    for i in range(2, n):
+        next_term = fib_sequence[i - 1] + fib_sequence[i - 2]
+        fib_sequence.append(next_term)
+
+    return fib_sequence
+
+def main():
+    print("Fibonacci Sequence Generator")
+    try:
+        n = int(input("Enter the number of terms in the sequence: "))
+        if n <= 0:
+            print("Please enter a positive integer.")
+        else:
+            fibonacci_sequence = generate_fibonacci_sequence(n)
+            print("Fibonacci Sequence:")
+            print(fibonacci_sequence)
+    except ValueError:
+        print("Invalid input. Please enter a positive integer.")
+
+if _name_ == "_main_":
+    main()
